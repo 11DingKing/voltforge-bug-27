@@ -2,7 +2,7 @@ package certification
 
 func (i *CertificationIndexIndex) Load(bucket string) []string {
 	if i == nil || i.buckets == nil {
-		return nil
+		return []string{}
 	}
 	values := i.buckets[bucket]
 	out := make([]string, len(values))
